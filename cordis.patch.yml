@@ -1,0 +1,4 @@
+# Companion bundle for the phone-chat mirror: one Client plugin row.
+- insert:
+    - id: dsh-im-phone-chat
+      name: 'dsh-im-phone-chat'

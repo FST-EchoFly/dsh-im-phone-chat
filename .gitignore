@@ -1,0 +1,17 @@
+# dependencies and build cache
+node_modules/
+.build/
+
+# logs and local temp files
+*.log
+*.tmp
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+push-to-github.cmd
+push-to-github.ps1
+.npmrc

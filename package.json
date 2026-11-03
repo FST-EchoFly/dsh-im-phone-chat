@@ -1,0 +1,78 @@
+{
+  "name": "dsh-im-phone-chat",
+  "version": "1.4.0",
+  "type": "module",
+  "description": "DSH 手机聊天镜像：在左侧栏/主面板实时查看手机 IM 会话与助手回复（dsh-im 配套，支持 Markdown + LaTeX + 图片）。Read-only phone IM chat mirror for DeepSeek Harness.",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "im",
+    "qq",
+    "wechat",
+    "chat",
+    "chat-mirror",
+    "katex",
+    "markdown",
+    "cordis"
+  ],
+  "author": "Rs_Iomanip",
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FST-EchoFly/dsh-im-phone-chat.git"
+  },
+  "homepage": "https://github.com/FST-EchoFly/dsh-im-phone-chat#readme",
+  "bugs": {
+    "url": "https://github.com/FST-EchoFly/dsh-im-phone-chat/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "src",
+    "build.mjs",
+    "wrap.mjs"
+  ],
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.9",
+    "katex": "^0.16.47",
+    "markdown-it": "^14.3.3"
+  }
+}
