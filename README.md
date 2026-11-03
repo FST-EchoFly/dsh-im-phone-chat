@@ -6,11 +6,13 @@
 [![GitHub stars](https://img.shields.io/github/stars/FST-EchoFly/dsh-im-phone-chat.svg?style=social)](https://github.com/FST-EchoFly/dsh-im-phone-chat)
 
 配套 [dsh-im](https://github.com/xmanrui/dsh-im)（`@xmanrui/dsh-im`）的 DSH 桌面端插件：
-把手机 IM 通道（QQ / 微信 / 飞书 …）经 dsh-im 桥接进 DSH 的会话，以**只读聊天镜像**的形式显示在 DSH 界面里。
+可以把手机 IM 通道（QQ / 微信 / 飞书 …）经 dsh-im 桥接进 DSH 的会话，以**只读聊天镜像**的形式显示在 DSH 界面里喵。
+
+# 支持
 
 - 左侧栏入口 → 主区域聊天面板
-- 手机消息 / 助手流式回复实时同步，顺序正确
-- Markdown + LaTeX 公式渲染（KaTeX → MathML）
+- 手机消息 / 助手流式回复实时同步
+- Markdown + LaTeX 公式渲染
 - 手机图片内联显示，点击放大、可旋转
 - 多个手机会话可切换，支持加载更早历史
 
@@ -31,6 +33,8 @@
 # <profile>：桌面端一般是 desktop，Web 端一般是 web
 dsh plugin --profile <profile> add dsh-im-phone-chat
 ```
+
+使用dsh自带的插件安装功能直接输入dsh-im-phone-chat安装就可以了喵
 
 安装后刷新一次页面（桌面端 `Ctrl+R` / `F5`），左侧栏底部、设置按钮上方出现「聊天气泡」图标。
 
